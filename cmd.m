@@ -116,7 +116,7 @@ function out = stream2char(stream)
     % USAGE:
     %   str = stream2char(stream)
 
-    out = arrayfun(@(x)char(stream.read), 1:stream.available);
+    out = char(arrayfun(@(x)char(stream.read), 1:stream.available));
 end
 
 function bool = isRunning(process)
